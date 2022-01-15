@@ -1,0 +1,248 @@
+/*
+font-family: 'Licorice', cursive;
+font-family: 'Nunito', sans-serif;
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Nunito', sans-serif;
+}
+
+body {
+	background: #FCF8FB;
+}
+  
+header {
+	width: 100%;
+	height: 100px;
+
+}
+
+.section-header {
+	position: fixed;
+	width: 100%;
+	height: 38px;
+	padding: 7px;
+	background: #19131F;
+	box-shadow: -2px 4px 4px #000000;
+	display: inline-flex;
+	z-index: 99;
+	opacity: 0.977;
+}
+#curriculo {
+	color: white;
+	text-shadow: 1px 1px 1px #FCF8FB;
+	margin: 0px 2% 0px 7%; 
+}
+
+#nome-completo {
+	color: white;
+	text-shadow: 1px 1px 1px #FCF8FB;
+	margin: 0px 5% 0px 2%;
+}
+
+.buttons {
+	align-self: center;
+    width: calc(100% - 74%);
+    right: 0px;
+    position: absolute;
+    padding: 4px;
+
+}
+
+.buttons button {
+	margin-right: 5px;
+	border-radius: 18px;
+    padding: 1.3px;
+} 
+
+.right-button {
+	margin-right: 5%;
+}
+
+
+
+.section-perfil {
+	position: relative;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+	background: #dfdfdf;
+	box-shadow: 0px 0px 2px #bdbdbd;
+}  
+
+.caixa-perfil {
+	width: 22%;
+	padding: 15px;
+	margin: 1% 8% 1% 2%;
+	border-radius: 35%;
+	box-shadow: 1px 1px 10px #bdbdbd;
+	display: flex;
+	text-align: center;	
+    align-items: center;
+}
+
+
+.foto-perfil {
+width: 90%;
+border-radius: 35%;
+box-shadow: 2px 2px 4px black;
+
+}
+
+
+.sobre-perfil {
+	width: 35%;
+	text-align: left;
+	margin: 1% 1% 1% 6%;
+	font-size: 1.3em;
+}
+
+
+
+
+
+
+.section-experiencia {
+	position: relative;
+}
+.section-experiencia h4 {
+	position: relative;
+	font-size: 3em;
+	margin: 9vh 0 4vh 0;
+	text-align: center;
+
+}
+
+.caixa-3 h5 {
+	font-size: 2em;
+	align-self: center;	
+	margin-right: 10px;
+}
+
+.caixas-experiencia {
+	position: relative;
+	width: 85%;
+	padding: 40px;
+	margin: 30px auto;
+	background-color: #bdbdbd;
+	border-radius: 20px;
+}
+
+.caixas-experiencia ul {
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 5px;
+	
+}
+
+.caixa-1, .caixa-2, .caixa-3 {
+	display: flex;
+	margin: 10px;
+}
+
+.caixa-3{
+	margin: 20px 0 0 0;
+}
+.caixa {
+	width: 100%;
+	padding: 10px  10px  10px  18px;
+	margin: 10px;
+	background-color: #FCF8FB;
+	border-radius: 15px;
+
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+	height: 28px;
+	width: 100%;
+	background: #19131F;
+	box-shadow: -1px -2px 3px #000000;
+}
+
+
+
+
+@media (max-width: 1240px) {
+	.buttons{
+		display: none;
+	}
+}
+
+@media (max-width: 800px) {
+	.caixa-1, .caixa-2, .caixa-3 {
+		display: flex;
+		margin: 10px;
+		flex-direction: column;
+	}
+	.caixa-perfil{
+		margin: 30px 20px 40px 20px;
+		width: auto;
+		max-width: 20em;	
+
+	}
+
+	.sobre-perfil{
+		width: auto;
+		max-width: 20em;
+		margin: 30px 20px 40px 20px;	
+	}
+
+	.section-perfil{
+		display: flex;
+		flex-direction: column;	
+
+}
+}
+
+@media (max-width: 450px) {
+	#curriculo {
+		display: none;
+	}
+
+	.section-perfil{
+		display: flex;
+		flex-direction: column;
+		
+}
+	.caixa-perfil{
+		margin: 30px 20px 40px 20px;
+
+	}
+	
+	.sobre-perfil{
+		width: fit-content;
+		margin: 20px;
+		text-align: center;
+		margin-bottom: 80px;
+	}
+
+	.caixas-experiencia {
+		
+		width: 95%;
+		padding: 2px;
+		margin: 30px auto;
+	
+	}
+
+	.caixa-1, .caixa-2, .caixa-3 {
+		margin: 5px;
+	}
+	.caixa {
+		width: 95%;
+		padding: 5px;
+
+	}
+
+}
