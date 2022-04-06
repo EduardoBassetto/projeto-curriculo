@@ -51,8 +51,9 @@ body {
 
 
 #logo{
-height: 80%;
-margin: 30px;
+	height: 80%;
+	width: auto;
+	margin: 0 30px;
 }
 
 
@@ -60,7 +61,7 @@ margin: 30px;
 	color: white;
 	transition: 2s;
 	letter-spacing: 5px;
-}
+	}
 
 #nome-abreviado {
 	color: white;
@@ -70,20 +71,38 @@ margin: 30px;
 }
 
 
-.indice{
+.nav-list{
     position: absolute;
-    right: 10px;
+	display: flex;
+    right: 20px;
+	flex-direction: row;
+	list-style: none;
+	
+}
+.mobile-menu{
+	position: absolute;
+	right: 20px;
+	cursor: pointer;
+	display: none;
+	z-index: 100;
 }
 
-.indice a{
+.mobile-menu div{
+	width: 40px;
+	height: 2px;
+	background: white;
+	margin: 8px;
+}
+
+.nav-list a{
 	color: white;
 	text-decoration: none;
 	letter-spacing: 2px;
 	transition: 1s;
-
+	margin-right: 5px;
 }
 
-.indice a:hover{
+.nav-list a:hover{
 	color: #ffbf48;
 }
 
@@ -387,6 +406,35 @@ top: 5em;
 
 @media (max-width: 1023px) {
 
+
+	.nav-list{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 40vw;
+		height: 100vh;
+		background: black;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding-top: 20vh;
+		transform: translateX(100%);
+		transition: 0.8s ease-in-out;
+		
+	}
+	.active{
+		transform: translateX(0%);
+		min-width: 200px;
+		
+	}
+
+	.mobile-menu{
+		position: absolute;
+		right: 20px;
+		cursor: pointer;
+		display: block;
+	}
+
 	.section-perfil{
 		flex-direction: column;
 	}
@@ -415,15 +463,16 @@ top: 5em;
 }
 
 @media(max-width: 920px){
-	.section-header, .section-header-short{
 
-
+	.nav-list{
+		width: 35vw;
 	}
 	.navSocial{
 		display: inline-flex;
 		width: 70%;
 	}
-	.indice{
+
+	#nome-abreviado{
 		display: none;
 	}
 }
