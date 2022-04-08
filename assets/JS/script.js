@@ -20,7 +20,7 @@ function funcoes_scroll() {
     } if (scroll > 2070) {
         atualmenteAlura.style.transform = "scale(1)";
     }if (scroll > 1780 && largura > 1140){
-        dataTitulo.style.transform = "translateY(120px)";
+        dataTitulo.style.transform = "translateY(100px)";
     } else {
         dataTitulo.style.transform = "translateY(0px)";
     }

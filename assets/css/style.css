@@ -22,8 +22,8 @@ body {
 .section-header {
 	position: fixed;
 	width: 100%;
-	height: 110px;
-	padding: 0px 6px 0px 6px;
+	height: 14vh;
+	padding: 0px 6px;
 	background: #080704;
 	box-shadow: 0px 0px 4px #000000;
 	z-index: 99;
@@ -37,7 +37,7 @@ body {
 .section-header-short {
 	position: fixed;
 	width: 100%;
-	height: 50px;
+	height: 8vh;
 	background: #080704;
 	box-shadow: 0px 0px 4px #000000;
 	z-index: 99;
@@ -111,25 +111,26 @@ body {
 /* ############################################################### INICIO  PERFIL ############################################################### */
 
 .section-perfil {
-	position: relative;
     width: 100%;
-	padding: 60px 0px;
+	height: 75vh;
+	min-height: 420px;
     display: inline-flex;
     align-items: center;
     justify-content: space-evenly;
 	background: #dfdfdf;
 	box-shadow: 0px 0px 2px #dddddd;
-	margin: 20vh 0;
+	margin: 20vh 0 1vh 0;
+	padding: 50px;
 	
 }   
 .foto-perfil {
 	max-width: 460px;
-	width: 35%;
+	width: 29%;
 	min-width: 300px;
 	border-radius: 35%;
 }
 .sobre-perfil {
-	width: 39%;
+	width: 55%;
 	text-align: left;
 	font-size: 1.3em;
 }
@@ -166,32 +167,55 @@ body {
 
 
 .section-experiencia {
-	position: relative;
-	margin: 10em 0 15em 0;
+	margin: 9vh 0 0 0;
 	list-style: none;
+	height: 100vh;
+	min-height: 660px;
 }
 
 #tituloSection{
 	font-size: 3em;
 	text-align: center;
-	margin-bottom: 1em;
 	transition: .6s ease-in-out;
 }
 
 .backGround-display {
 	width: 100%;
+	height: 74%;
 	background-color: #dddddd;
 	display: flex;
-	justify-content: space-evenly;
+	flex-wrap: wrap;
+	padding: 30px;
+	justify-content: center;
+	align-content: space-around;
+}
+
+.grupo-box-info{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
 	align-items: center;
-	height: 550px;
+}
+
+.display2{
+	display: flex;
+	box-shadow: inset 0px 0px 2px #f3f3f3;
+	background-color: #ecebeb;
+	width: 27%;
+	height: 400px;
+	border-radius: 20px;
+	transition: 0.6s;
+	justify-content: center;
+    align-items: center;
+	text-align: center;
 }
 
 .display1, .display3{
 	display: flex;
 	box-shadow: inset 0px 0px 2px #f3f3f3;
 	background-color: #ecebeb;
-	width: 20%;
+	width: 22%;
 	height: 350px;
 	padding: 20px;
 	border-radius: 20px;
@@ -200,18 +224,7 @@ body {
     align-items: center;
 	text-align: center;
 }
-.display2{
-	display: flex;
-	box-shadow: inset 0px 0px 2px #f3f3f3;
-	background-color: #ecebeb;
-	width: 24%;
-	height: 400px;
-	border-radius: 20px;
-	transition: 0.6s;
-	justify-content: center;
-    align-items: center;
-	text-align: center;
-}
+
 
 #display1:hover, .display3:hover{
 	width: 22%;
@@ -262,14 +275,13 @@ body {
 }
 
 
-.grupo-box-experiencia{
-	display: none;
-}
 
 .grupo-box-navegation{
-	position: absolute;
-	display: inline-flex;
-	bottom: 20px;
+	position:inherit;
+	display: flex;
+	flex-direction: row;
+	height:fit-content;
+	margin-top: 10px;
 }
 
 .box{
@@ -279,7 +291,9 @@ body {
 	border-radius: 40px;
 	margin: 4px 25px;
 }  
-
+.grupo-box-experiencia{
+	display: none;
+}
 .grupoAnimacao{
 	display: none;
 }
@@ -328,10 +342,12 @@ top: 5em;
 /* ############################################################### INICIO  OBJETIVOS ############################################################### */
 
 .section-objetivos{
-	position: relative;
-	width: 100%;
-	margin: 20vh 0 20vh 0;
-
+	display: flex;
+	flex-direction: column;
+	height: 80vh;
+	min-height:450px;
+	align-items: center;
+	justify-content: center;
 }
 #objetivos{
 	position: relative;
@@ -346,20 +362,15 @@ top: 5em;
 /* ############################################################### INICIO  CONTATO ############################################################### */
 
 .section-contato{
-	position: relative;
-	width: 100%;
 	background-color: rgb(211, 211, 211);
-	padding: 2em 0;
+	padding: 4em 0;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
 	text-align: center;
 }
 
-.section-contato #tituloSection {
-	margin: 3em 0 0em 0;
-}
 
 .navContato a{
 	margin: 20px;
@@ -412,20 +423,24 @@ top: 5em;
 		top: 0;
 		right: 0;
 		width: 40vw;
+		min-width: 250px;
 		height: 100vh;
 		background: black;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
 		padding-top: 20vh;
-		transform: translateX(100%);
 		transition: 0.8s ease-in-out;
-		
+		opacity: 0.9;
 	}
+
+	.nav-list li {
+		opacity: 1;
+	}
+
 	.active{
-		transform: translateX(0%);
+		transform: translateX(100%);
 		min-width: 200px;
-		
 	}
 
 	.mobile-menu{
@@ -436,7 +451,8 @@ top: 5em;
 	}
 
 	.section-perfil{
-		flex-direction: column;
+		flex-wrap: wrap;
+		height: auto;
 	}
 	.foto-perfil {
 		margin-bottom: 2em;
@@ -499,6 +515,13 @@ top: 5em;
 		border-radius: 40px;
 		margin: 4px 15px;
 	}  
+
+	.display2{
+		width: 40%;
+		min-width: 300px;
+		padding: 10px;
+	}
+
 	.display2:hover{
 		font-size: 1.1em;
 	}
@@ -510,10 +533,13 @@ top: 5em;
 	}
 }
 
-@media (max-width: 420px) {
+@media (max-width: 470px) {
+	.section-perfil{
+		padding: 10px;
+	}
+
 	.navSocial{
-		position: relative;
-	right: 1em;
+	
 	}
 	
 	#display2 {
@@ -535,8 +561,12 @@ top: 5em;
 		font-size: 1em;
 	}
 }
+@media (max-width: 400px) {
 
-
+	.navSocial{
+		flex-wrap: wrap;
+	}
+}
 /*
 @media (max-height: 768px) {
 	.section-header {
