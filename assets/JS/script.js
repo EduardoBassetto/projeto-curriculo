@@ -128,7 +128,7 @@ function moveLeft(){
             setTimeout(animation, 150);
     }
     animacaoMovDisplay();
-   
+   document.querySelector(".mobile-menu")=click();
 }
 
 const display1 = document.querySelector('.display1');
