@@ -31,8 +31,12 @@ const heightAtual = document.addEventListener('scroll', funcoes_scroll);
 window.onload = inicio;
 
 function inicio(){
+    const navBar = document.querySelector(".mobile-menu");
+    navBar.click();
+
     display2.appendChild(boxExp[position]);
     display3.appendChild(boxExp[position+1]);
+    
 
     if (position == 0) {
         box[0].style.backgroundColor = "grey"
@@ -128,8 +132,8 @@ function moveLeft(){
             setTimeout(animation, 150);
     }
     animacaoMovDisplay();
-   document.querySelector(".mobile-menu")=click();
 }
+
 
 const display1 = document.querySelector('.display1');
 const display2 = document.querySelector('.display2');
@@ -141,6 +145,7 @@ const buttonRight = document.querySelector('[data-right]');
 buttonRight.addEventListener('click', moveRight);
 const buttonLeft = document.querySelector('[data-left]');
 buttonLeft.addEventListener('click', moveLeft);
+
 
 
 
